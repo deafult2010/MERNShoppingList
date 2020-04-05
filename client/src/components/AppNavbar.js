@@ -8,21 +8,16 @@ import {
   NavItem,
   NavLink,
   Container,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
 } from 'reactstrap';
 
 class AppNavbar extends Component {
   state = {
-    isOpen: false
+    isOpen: false,
   };
 
   toggle = () => {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
   };
 
@@ -36,9 +31,7 @@ class AppNavbar extends Component {
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className='ml-auto' navbar>
                 <NavItem>
-                  <NavLink href='http://github.com/bradtraversy'>
-                    Github
-                  </NavLink>
+                  <NavLink href='http://github.com/deafult2010'>Github</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>

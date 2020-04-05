@@ -47,7 +47,7 @@ export const deleteItem = (id) => (dispatch) => {
   axios.delete(`/api/items/${id}`).then((res) =>
     dispatch({
       type: DELETE_ITEM,
-      payload: id,
+      payload: res.data.id,
     })
   );
 };

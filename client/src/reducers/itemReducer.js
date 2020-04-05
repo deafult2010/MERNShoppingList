@@ -3,6 +3,7 @@ import {
   ADD_ITEM,
   DELETE_ITEM,
   ITEMS_LOADING,
+  UPDATE_ITEM,
 } from '../actions/types';
 
 const initialState = {
@@ -22,6 +23,13 @@ export default function (state = initialState, action) {
       return {
         ...state,
         items: state.items.filter((item) => item._id !== action.payload),
+      };
+    case UPDATE_ITEM:
+      return {
+        ...state,
+        items: state.items.map((item) =>
+          item._id === action.payload._id ? action.payload : item
+        ),
       };
     case ADD_ITEM:
       return {
